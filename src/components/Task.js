@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 
 const btnDelete = {
@@ -29,12 +30,16 @@ class Task extends Component {
         {task.title} -
         {task.description} -
         {task.done} -
-        {task.id} -
+        {task.id}
         <input type="checkbox"/>
-        <button className={btnDelete}>❌</button>
+        <button style={btnDelete}>❌</button>
       </p>
     )
   }
+}
+
+Task.propTypes = {
+  task: PropTypes.object.isRequired
 }
 
 export default Task
