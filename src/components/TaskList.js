@@ -7,7 +7,12 @@ export default class TaskList extends Component {
   render() {
     return (
       this.props.tasks.map(task =>
-        <Task task={task} key={task.id} />
+        <Task 
+          task={task} 
+          key={task.id}
+          deleteTask={this.props.deleteTask}
+          checkDone={this.props.checkDone}
+        />
         )
     )
   }
