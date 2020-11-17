@@ -5,6 +5,7 @@ import tasks from './data/tasks.json'
 // Components
 import TaksForm from './components/TaksForm';
 import TaskList from './components/TaskList';
+import Post from './components/Post';
 
 // console.log(tasks)
 
@@ -51,6 +52,7 @@ export default class App extends Component {
           deleteTask={this.deleteTask}
           checkDone={this.checkDone}
         />
+        <Post />
       </div>
     )
   }
